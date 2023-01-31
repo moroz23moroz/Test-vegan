@@ -1,0 +1,155 @@
+@import 'vars';
+@import 'fonts';
+@import 'reset';
+@import 'libs';
+@import 'global';
+
+h1,
+h2 {
+    @extend %title-font;
+}
+
+.header {
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 145px;
+    }
+
+}
+
+.logo {
+    @extend %logo;
+}
+
+.menu {
+    &__list {
+        display: flex;
+    }
+
+    &__list-item {
+        margin-left: 80px;
+    }
+
+    &__list-link {
+        font-weight: 600;
+        font-size: 22px;
+    }
+}
+
+.main {
+    margin-top: 145px;
+}
+
+.about {
+    &__title {
+        margin-bottom: 125px;
+    }
+
+    &__inner {
+        display: flex;
+        gap: 80px;
+        margin-bottom: 90px;
+    }
+
+    &__inner div {
+        flex: 1 1 0;
+    }
+
+    &__item {
+        display: flex;
+        gap: 20px;
+    }
+
+    &__text {
+        margin-bottom: 35px;
+    }
+
+    &__subtitle {
+        max-width: 65%;
+    }
+
+
+    &__link {
+        color: #AEA9A9;
+        font-size: 24px;
+        line-height: 35px;
+    }
+}
+
+.project {
+    margin-top: -15px;
+    padding: 65px 0;
+    border: 1.5px;
+    border-color: #282B00;
+    border-style: solid;
+
+    &__title {
+        margin-bottom: 60px;
+    }
+
+    &__inner {
+        display: flex;
+        gap: 110px;
+
+
+        &__inner div {
+            flex: 1 1 auto;
+        }
+
+    }
+
+    &__text {
+        line-height: 35px;
+    }
+
+    &__text:first-child {
+        max-width: 495px;
+    }
+}
+
+.links {
+    margin-top: 95px;
+    margin-bottom: 100px;
+
+    &__box {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    &__item {
+        font-size: 38px;
+        line-height: 37px;
+        color: #252421;
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            bottom: 0;
+            background-image: url('../images/arrow.svg');
+            z-index: 5;
+        }
+    }
+}
+
+.footer {
+    margin: 140px 0;
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+}
+
+.footer a {
+    font-size: 22px;
+    color: inherit;
+
+}
